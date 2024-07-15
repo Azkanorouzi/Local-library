@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": ">=22.3.0"
+    "node": ">=v16"
   },
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
