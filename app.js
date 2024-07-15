@@ -1,6 +1,5 @@
 // Importing installed libraries
 require("dotenv").config();
-const RateLimit = require("express-rate-limit");
 const helmet = require("helmet");
 const compression = require("compression");
 const createError = require("http-errors");
