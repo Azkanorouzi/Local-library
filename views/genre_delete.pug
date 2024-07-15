@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= genre.name
+  if booksByGenre.length == 0
+    p=`Do you want to delete the ${genre.name} genre ?`
+    form(method="POST")
+      button(type="submit" class="btn-danger rounded") Delete
+  else
+    p=`You can not delete the ${genre.name} genre, you must first delete all the books by these books: `
+    each book in booksByGenre
+      li.bookInstance
+        a(href=book.url)= book.title
+      hr

@@ -1,0 +1,10 @@
+extends layout 
+
+block content
+  h1 Delete
+  h2=bookInstance.imprint
+  p Do you wanna delete this book instance ?
+  form(method='POST')
+    div.form-group
+      input#authorid.form-control(type='hidden', name='bookinstanceid', value=bookInstance._id )
+    button.btn.btn-primary(type='submit') Delete

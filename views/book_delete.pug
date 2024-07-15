@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= targetBook.title
+  if bookInstances.length
+    p You must first delete the book instances 
+    ul
+      each bookInstance in bookInstances
+        li
+          a(href=bookInstance.url)= bookInstance.imprint
+  else
+    p Are you sure you wanna delete #{targetBook.title} book?
+    form(method='POST')
+      div.form-group
+        input#authorid.form-control(type='hidden', name='bookid', value=targetBook._id )
+      button.btn.btn-primary(type='submit') Delete
